@@ -16,22 +16,30 @@
           <input type="text" name="pending" placeholder="Enter a new To Do" />
           <button type="submit">Add to do</button>
           </form>
-          {{#list}}
+
           <h1>To do List</h1>
           <ul class="pending">
-            <li>
-              <!-- {{#pending}} -->
+
+            {{#list}}
+              {{#pending}}
+              <li>
                 {{pending}}
-              <!-- {{/pending}} -->
+              </li>
+              {{/pending}}
+            {{/list}}
+
           </ul>
           <h1>Completed items</h1>
           <ul class="complete">
-            <li>
-              <!-- {{#complete}} -->
-                {{complete}}
-              <!-- {{/complete}} -->
+              {{#list}}
+                {{#complete}}
+                <li>
+                  {{complete}}
+                </li>
+                {{/complete}}
+              {{/list}}
           </ul>
-        {{/list}}
+
         </div>
       </div>
     </div>
