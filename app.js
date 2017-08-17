@@ -30,6 +30,11 @@ app.post("/", function (req, res) {
   res.redirect('/todo');
 })
 
+app.post("/done", function (req, res) {
+  console.log("mark complete pushed")
+  res.redirect('/todo');
+})
+
 app.listen(3000, function () {
   console.log('Successfully started express application!');
 });
